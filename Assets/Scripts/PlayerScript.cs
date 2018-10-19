@@ -13,9 +13,9 @@ public class PlayerScript : MonoBehaviour {
     }*/
     private Rigidbody2D rd;
 
-    public float jump;
+    public float jumpSpeed;
 
-    public float jumpLimit;
+    public bool jumping=false;
 
 	void Start ()
     {
@@ -24,18 +24,34 @@ public class PlayerScript : MonoBehaviour {
 	}
 	
 	
-	void FixedUpdate ()
+	void Update ()
     {
         /* if (Input.GetKey(KeyCode.Space))
          {
             rd.velocity = new Vector2(rd.velocity.x, 0);
-            rd.AddForce(new Vector2(0, jump));
+            rd.AddForce(new Vector2(0, jumpSpeed));
          }*/
          
-       if (Input.GetKeyDown(KeyCode.Space))
+      /* if (Input.GetKeyDown(KeyCode.Space))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpSpeed);
         } 
+        */
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (jumping == false)
+            {
+                jumping = true;
+                GetComponent<Rigidbody2D>().AddForce(Vector3.up * jumpSpeed);
+            }
+        }
     }
-   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.name == "Ground")
+        {
+            jumping = false;
+        }
+    }
+
 }
