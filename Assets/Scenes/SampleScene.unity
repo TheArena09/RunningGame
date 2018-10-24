@@ -770,6 +770,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &870615364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870615366}
+  - component: {fileID: 870615365}
+  m_Layer: 0
+  m_Name: ObstalceRespawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &870615365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870615364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1397a684af6158649aacedee3b2427bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bin: {fileID: 4816056484140510, guid: 3fe6a691a320ed842aa8ff82d14404f5, type: 2}
+  timer: 0
+--- !u!4 &870615366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 870615364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9, y: -4.5, z: -0.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1589007498
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +897,7 @@ GameObject:
   - component: {fileID: 1649913261}
   - component: {fileID: 1649913260}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: EnemyRespawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,9 +915,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bicycle: {fileID: 4034890174503608, guid: 1a19e0e53174f5d4cbfd1d5ea6077386, type: 2}
-  bin: {fileID: 4816056484140510, guid: 3fe6a691a320ed842aa8ff82d14404f5, type: 2}
   motocycle: {fileID: 4386953155714350, guid: 3bb93748f4588af4e9fe4dfc7a6fa25c, type: 2}
   timer: 0
+  delay: 0
+  eSpeed: 2
 --- !u!4 &1649913261
 Transform:
   m_ObjectHideFlags: 0
@@ -883,7 +926,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1649913259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: -4.5, z: 0}
+  m_LocalPosition: {x: 9, y: -4, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -27,7 +27,7 @@ public class BackGroundMove : MonoBehaviour {
         distance += Time.deltaTime;
         distanceText.GetComponent<Text>().text = "Distance: " + (int)distance + "m"; // 거리 text 표시
 
-        delay += Time.deltaTime;  // 30초가 증가할때마다 빨라지는 배경 속력 구간
+        delay += Time.deltaTime;  // 30초가 증가할때마다 빨라지는 배경 속력 구간  
         if (10f <= delay)
         {
             delay = 0f;

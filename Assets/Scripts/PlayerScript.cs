@@ -26,11 +26,13 @@ public class PlayerScript : MonoBehaviour {
 	
 	void Update ()
     {
-        /* if (Input.GetKey(KeyCode.Space))
+        /* 
+         * if (Input.GetKey(KeyCode.Space))
          {
             rd.velocity = new Vector2(rd.velocity.x, 0);
             rd.AddForce(new Vector2(0, jumpSpeed));
-         }*/
+         }
+         */
          
       /* if (Input.GetKeyDown(KeyCode.Space))
         {
