@@ -5,15 +5,18 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour {
 
     
-    public float eSpeed;
+    public float eSpeed = 4;
     public Vector2 resetPos;
     public float delay;
-   
+    public GameObject bgObj;
+
 
 
     void Start()
     {
-        
+        bgObj = GameObject.Find("BG");
+        eSpeed = bgObj.GetComponent<BackGroundMove>().speed;
+        eSpeed *= 4;
     }
 
 

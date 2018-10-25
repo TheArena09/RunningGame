@@ -33,13 +33,14 @@ public class PlayerScript : MonoBehaviour {
             rd.AddForce(new Vector2(0, jumpSpeed));
          }
          */
-         
-      /* if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpSpeed);
-        } 
-        */
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        /* if (Input.GetKeyDown(KeyCode.Space))
+          {
+              GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpSpeed);
+          } 
+          */
+        //if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             if (jumping == false)
             {

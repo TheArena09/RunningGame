@@ -18,11 +18,12 @@ public class ObstacleRespawner : MonoBehaviour {
     {
         timer += Time.deltaTime;
 
-        if (timer > 9f)
+        if (timer > 27f)
         {
             CreateObsta();
             timer = 0;
         }
+        
     }
     void CreateObsta()
     {

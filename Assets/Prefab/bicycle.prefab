@@ -78,9 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7704bb590845140a44bf796d9f030d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eSpeed: 2
+  eSpeed: 4
   resetPos: {x: 0, y: 0}
   delay: 0
+  bgObj: {fileID: 1807767867605306, guid: bd061d9870e36cb40b08799e8acf06f8, type: 2}
 --- !u!212 &212040630583973800
 SpriteRenderer:
   m_ObjectHideFlags: 1
